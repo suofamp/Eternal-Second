@@ -300,11 +300,12 @@ footer .myself {
   width: 100%;
 }
 footer .myself p {
-  font-size: 15px;
+  font-size: 20px;
 }
 @media (max-width: 1000px) {
   footer .myself p {
     line-height: 10px;
+    font-size: 10px;
   }
 }
 footer .submenu {
@@ -316,10 +317,11 @@ footer .submenu {
   text-align: right;
 }
 footer .submenu p {
-  font-size: 15px;
+  font-size: 20px;
 }
 @media (max-width: 1000px) {
   footer .submenu p {
     line-height: 10px;
+    font-size: 10px;
   }
 }
