@@ -298,6 +298,7 @@ footer .myself {
   flex-direction: column;
   margin-left: 20px;
   width: 100%;
+  text-align: center;
 }
 footer .myself p {
   font-size: 20px;
@@ -305,6 +306,7 @@ footer .myself p {
 @media (max-width: 1000px) {
   footer .myself p {
     line-height: 5px;
+    width: 100%;
   }
 }
 footer .submenu {
@@ -313,7 +315,7 @@ footer .submenu {
   flex-direction: column;
   margin-right: 20px;
   width: 100%;
-  text-align: right;
+  text-align: center;
 }
 footer .submenu p {
   font-size: 20px;
@@ -321,5 +323,6 @@ footer .submenu p {
 @media (max-width: 1000px) {
   footer .submenu p {
     line-height: 5px;
+    width: 100%;
   }
 }
