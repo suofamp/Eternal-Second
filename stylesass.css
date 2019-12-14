@@ -258,10 +258,7 @@ footer{
 
     p{
       font-size:20px;
-      @include sp{
-        line-height: 10px;
       }
-    }
   }
 
   .submenu{
@@ -275,9 +272,6 @@ footer{
 
     p{
       font-size: 20px;
-      @include sp{
-        line-height: 10px;
-      }
     }
   }
 }
