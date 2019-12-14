@@ -300,7 +300,7 @@ footer .myself {
   width: 100%;
 }
 footer .myself p {
-  font-size: 18px;
+  font-size: 15px;
 }
 @media (max-width: 1000px) {
   footer .myself p {
@@ -316,7 +316,7 @@ footer .submenu {
   text-align: right;
 }
 footer .submenu p {
-  font-size: 18px;
+  font-size: 15px;
 }
 @media (max-width: 1000px) {
   footer .submenu p {
