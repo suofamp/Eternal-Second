@@ -304,7 +304,7 @@ footer .myself p {
 }
 @media (max-width: 1000px) {
   footer .myself p {
-    line-height: 10px;
+    line-height: 5px;
     font-size: 10px;
   }
 }
@@ -321,7 +321,7 @@ footer .submenu p {
 }
 @media (max-width: 1000px) {
   footer .submenu p {
-    line-height: 10px;
+    line-height: 5px;
     font-size: 10px;
   }
 }
