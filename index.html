@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css"></link>
 <style id="webmakerstyle">
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -166,9 +167,9 @@ p {
 .main {
   width: 100%;
   margin-top: 60px; }
-  .main .slideshow {
-    text-align: center;
-    width: 100%; }
+  .main .swiper-container {
+    width: 600px;
+    height: 300px; }
   .main .main-c {
     width: 1000px;
     margin: 0 auto;
@@ -406,8 +407,16 @@ footer {
         </ul>
       </div>
     </header>
-
     <div class="main">
+      <div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="image001.jpg"></div>
+    <div class="swiper-slide"><img src="image002.jpg"></div>
+    <div class="swiper-slide"><img src="image003.jpg"></div>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
       <div class="main-c">
         <div class="menu">
           <h2>Contents</h2>
@@ -417,7 +426,7 @@ footer {
           <div class="kobu">
 
           </div>
-          <img src="music-1368896_1280.png">
+          <img src="/Users/nagatakaito/Desktop/second_pagen/music-1368896_1280.png">
           <div class="content">
             <h3>Guitar</h3>
             <p>1年ほど前から練習していて、簡単な伴奏ならできるようになりました。</p>
@@ -428,7 +437,7 @@ footer {
           <div class="kobu">
 
           </div>
-          <img src="cheese-148351_1280.png">
+          <img src="/Users/nagatakaito/Desktop/second_pagen/cheese-148351_1280.png">
           <div class="content">
             <h3>Cheese</h3>
             <p>何にでもチーズをかけたい人間です。チーズ検定を取りたい。</p>
@@ -439,7 +448,7 @@ footer {
           <div class="kobu">
 
           </div>
-          <img src="beaded-1421178_1920.jpg">
+          <img src="/Users/nagatakaito/Desktop/second_pagen/beaded-1421178_1920.jpg">
           <div class="content">
             <h3>Spider</h3>
             <p>蜘蛛って可愛いし美しいし、時々怖くて素敵ですよね。</p>
@@ -447,7 +456,7 @@ footer {
           </div>
         </div>
         <div class="logo">
-          <img src="cobweb-151265_1280.png">
+          <img src="/Users/nagatakaito/Desktop/second_pagen/cobweb-151265_1280.png">
         </div>
       </div>
     </div>
@@ -469,6 +478,7 @@ footer {
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
 <script>
 document.getElementById("btn").onclick = function() {
   var obj = document.getElementById("mymenu");
@@ -481,14 +491,13 @@ document.getElementById("btn").onclick = function() {
 });
 };
 
-/*
-anime({
-  targets: '.menu',
-  translateY: 250,
-  duration: 3000,
-  easing: 'linear'
-}); */
-
+var swiper = new Swiper('.swiper-container', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  loop: true,
+});
 //# sourceURL=userscript.js
 </script>
 </body>
