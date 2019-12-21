@@ -1,19 +1,409 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="stylesass.css">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-  <!--  <link rel="stylesheet" type="text/css" href="breakpoint.css"> -->
-    <title>Eternal_Second</title>
-  </head>
-  <body>
-    <header>
-      <h1>First_Pagen</h1>
+<head>
+<meta charset="UTF-8" />
+
+<style id="webmakerstyle">
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+ul {
+  list-style: none; }
+
+body {
+  font-family: sans-serif; }
+
+header {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  background-color: #228b22;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+  align-items: center; }
+  header h1 {
+    font-size: 32px;
+    color: #fffacd;
+    margin-left: 20px; }
+  header .head-c {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    justify-content: flex-end;
+    margin-right: 20px; }
+    @media (max-width: 1000px) {
+      header .head-c {
+        display: none; } }
+    header .head-c a {
+      background-color: #fffacd;
+      color: #228b22;
+      height: 40px;
+      width: 100px;
+      font-size: 20px;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 15px;
+      margin: 10px 10px;
+      opacity: 0.8; }
+  header .spbtn {
+    visibility: hidden;
+    line-height: 60px;
+    font-size: 32px;
+    text-align: center;
+    position: fixed;
+    right: 20px; }
+    @media (max-width: 1000px) {
+      header .spbtn {
+        visibility: visible; } }
+  header .spmenu {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10; }
+    @media (max-width: 1000px) {
+      header .spmenu {
+        visibility: hidden; } }
+    header .spmenu ul {
+      width: 160px;
+      background-color: blue; }
+    header .spmenu li a {
+      text-align: center;
+      line-height: 40px;
+      display: block;
+      background-color: skyblue;
+      color: #fffacd;
+      font-size: 24px; }
+    header .spmenu .selected {
+      visibility: visible; }
+
+h3 {
+  margin: 20px 50px;
+  opacity: 1; }
+
+p {
+  margin: 20px 10px; }
+
+.main {
+  width: 100%;
+  margin-top: 60px; }
+  .main .slideshow {
+    text-align: center;
+    width: 100%; }
+  .main .main-c {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    background-color: oldlace;
+    height: 800px;
+    font-size: 22px; }
+    @media (max-width: 1000px) {
+      .main .main-c {
+        width: 100%; } }
+    .main .main-c span {
+      position: relative;
+      top: -60px;
+      display: block; }
+    .main .main-c .menu h2 {
+      line-height: 200px;
+      text-align: center;
+      width: 900px;
+      color: dimgray; }
+      @media (max-width: 1000px) {
+        .main .main-c .menu h2 {
+          text-align: center;
+          width: 100%; } }
+    .main .main-c .guitar {
+      opacity: 0.6;
+      transition: 0.5s; }
+      .main .main-c .guitar:hover {
+        opacity: 1;
+        transition: 0.5s; }
+      .main .main-c .guitar .kobu {
+        height: 200px;
+        width: 200px;
+        border-radius: 20px;
+        background-color: firebrick;
+        position: absolute;
+        right: 0;
+        left: auto;
+        top: 0; }
+        @media (max-width: 1000px) {
+          .main .main-c .guitar .kobu {
+            display: none; } }
+      .main .main-c .guitar img {
+        height: 200px;
+        position: absolute;
+        right: 50px;
+        top: 0;
+        z-index: 10;
+        transform: rotate(45deg); }
+        @media (max-width: 1000px) {
+          .main .main-c .guitar img {
+            display: none; } }
+      .main .main-c .guitar .content {
+        height: 200px;
+        width: 800px;
+        border-radius: 20px;
+        background-color: firebrick;
+        position: absolute;
+        right: 0;
+        left: auto;
+        top: 200px;
+        text-align: right;
+        color: mistyrose; }
+        @media (max-width: 1000px) {
+          .main .main-c .guitar .content {
+            height: 300px;
+            width: 100%;
+            text-align: center;
+            font-size: 25px;
+            line-height: 40px;
+            top: 200px; } }
+    .main .main-c .cheese {
+      opacity: 0.6;
+      transition: 0.5s; }
+      .main .main-c .cheese:hover {
+        opacity: 1;
+        transition: 0.5s; }
+      .main .main-c .cheese .kobu {
+        height: 200px;
+        width: 200px;
+        border-radius: 20px;
+        background-color: gold;
+        position: absolute;
+        right: auto;
+        left: 0;
+        top: 200px; }
+        @media (max-width: 1000px) {
+          .main .main-c .cheese .kobu {
+            display: none; } }
+      .main .main-c .cheese img {
+        height: 200px;
+        position: absolute;
+        left: 5px;
+        top: 200px;
+        z-index: 10; }
+        @media (max-width: 1000px) {
+          .main .main-c .cheese img {
+            display: none; } }
+      .main .main-c .cheese .content {
+        height: 200px;
+        width: 800px;
+        border-radius: 20px;
+        background-color: gold;
+        position: absolute;
+        right: auto;
+        left: 0;
+        top: 400px;
+        text-align: left;
+        color: dimgray; }
+        @media (max-width: 1000px) {
+          .main .main-c .cheese .content {
+            height: 300px;
+            width: 100%;
+            text-align: center;
+            font-size: 25px;
+            line-height: 40px;
+            top: 500px; } }
+    .main .main-c .spider {
+      opacity: 0.6;
+      transition: 0.5s; }
+      .main .main-c .spider:hover {
+        opacity: 1;
+        transition: 0.5s; }
+      .main .main-c .spider .kobu {
+        height: 200px;
+        width: 200px;
+        border-radius: 20px;
+        background-color: royalblue;
+        position: absolute;
+        right: 0;
+        left: auto;
+        top: 400px; }
+        @media (max-width: 1000px) {
+          .main .main-c .spider .kobu {
+            display: none; } }
+      .main .main-c .spider img {
+        width: 180px;
+        position: absolute;
+        right: 10px;
+        top: 440px;
+        z-index: 10;
+        border-radius: 20px; }
+        @media (max-width: 1000px) {
+          .main .main-c .spider img {
+            display: none; } }
+      .main .main-c .spider .content {
+        height: 200px;
+        width: 800px;
+        border-radius: 20px;
+        background-color: royalblue;
+        position: absolute;
+        right: 0;
+        left: auto;
+        top: 600px;
+        text-align: right;
+        color: mistyrose; }
+        @media (max-width: 1000px) {
+          .main .main-c .spider .content {
+            height: 300px;
+            width: 100%;
+            text-align: center;
+            font-size: 25px;
+            line-height: 40px;
+            top: 800px; } }
+    .main .main-c .logo {
+      height: 200px;
+      width: 200px;
+      position: absolute;
+      top: 600px;
+      left: 0; }
+      @media (max-width: 1000px) {
+        .main .main-c .logo {
+          display: none; } }
+      .main .main-c .logo img {
+        width: 200px;
+        margin: 0 auto; }
+        @media (max-width: 1000px) {
+          .main .main-c .logo img {
+            display: none; } }
+
+footer {
+  height: 200px;
+  width: 100%;
+  background-color: #228b22;
+  opacity: 0.8;
+  display: flex; }
+  @media (max-width: 1000px) {
+    footer {
+      position: absolute;
+      top: 1160px; } }
+  footer .myself {
+    color: #fffacd;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 100%;
+    text-align: center; }
+    footer .myself p {
+      font-size: 20px; }
+      @media (max-width: 1000px) {
+        footer .myself p {
+          line-height: 5px;
+          width: 100%; } }
+  footer .submenu {
+    color: #fffacd;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 100%;
+    text-align: center; }
+    footer .submenu p {
+      font-size: 20px; }
+      @media (max-width: 1000px) {
+        footer .submenu p {
+          line-height: 5px;
+          width: 100%; } }
+
+</style>
+</head>
+<body>
+<header>
+      <h1>Eternal_Second</h1>
       <div class="head-c">
         <a href="#guitar">Guitar</a>
         <a href="#">Cheese</a>
         <a href="#">Spider</a>
+      </div>
+      <div class="spbtn">
+        <p id="btn">押</p>
+      </div>
+      <div class = "spmenu">
+        <ul id="mymenu">
+          <li id ="li1"><a href="#guitar">Guitar</a></li>
+          <li id="li2"><a href="#">Cheese</a></li>
+          <li id="li3"><a href="#">Spider</a></li>
+        </ul>
       </div>
     </header>
 
@@ -27,7 +417,7 @@
           <div class="kobu">
 
           </div>
-          <img src="music-1368896_1280.png">
+          <img src="/Users/nagatakaito/Desktop/second_pagen/music-1368896_1280.png">
           <div class="content">
             <h3>Guitar</h3>
             <p>1年ほど前から練習していて、簡単な伴奏ならできるようになりました。</p>
@@ -38,7 +428,7 @@
           <div class="kobu">
 
           </div>
-          <img src="cheese-148351_1280.png">
+          <img src="/Users/nagatakaito/Desktop/second_pagen/cheese-148351_1280.png">
           <div class="content">
             <h3>Cheese</h3>
             <p>何にでもチーズをかけたい人間です。チーズ検定を取りたい。</p>
@@ -49,7 +439,7 @@
           <div class="kobu">
 
           </div>
-          <img src="beaded-1421178_1920.jpg">
+          <img src="/Users/nagatakaito/Desktop/second_pagen/beaded-1421178_1920.jpg">
           <div class="content">
             <h3>Spider</h3>
             <p>蜘蛛って可愛いし美しいし、時々怖くて素敵ですよね。</p>
@@ -57,13 +447,13 @@
           </div>
         </div>
         <div class="logo">
-          <img src="cobweb-151265_1280.png">
+          <img src="/Users/nagatakaito/Desktop/second_pagen/cobweb-151265_1280.png">
         </div>
       </div>
     </div>
 
     <footer>
-        <div class="myself">
+        <div class="myself"  id="elem">
           <p>名前：あんぷのす</p>
           <p>年齢：２３歳</p>
           <p>仕事：建築系設計</p>
@@ -75,4 +465,31 @@
       </div>
     </footer>
   </body>
+</html>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+<script>
+document.getElementById("btn").onclick = function() {
+  var obj = document.getElementById("mymenu");
+  obj.classList.toggle("selected");
+  anime({
+  targets: '.selected',
+  translateY: [0,60],
+  easing: 'linear',
+  duration: 100,
+});
+};
+
+/*
+anime({
+  targets: '.menu',
+  translateY: 250,
+  duration: 3000,
+  easing: 'linear'
+}); */
+
+//# sourceURL=userscript.js
+</script>
+</body>
 </html>
